@@ -79,7 +79,7 @@ We can combine our score vectors, and our opponents' ones for the overall run ra
 
 ![series1.png](doc/pic/series1.png)
 
-The NRR is just the difference in the green RR vectors' slopes.
+The NRR is just the difference between the green overall run rate vectors' slopes.
 
 ## WHY - To Bowl or to Bat?
 
