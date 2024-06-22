@@ -18,7 +18,7 @@ The rate at which a team scores, the *run rate*, is -- intuitively -- runs divid
 
 $$rr = \frac{runs}{overs}$$
 
-There is just one little twist: if a team is bowled out, the full game overs instead of the ones actually played are applied. Here a three examples:
+There is just one little twist: if a team is bowled out, the full game overs instead of the ones actually played are applied. Here are three examples:
 
 1. Our team bats first and is not bowled out -- it uses all available overs. It might score 162 runs off of the full 20 overs, with a run rate of 162/20 = 8.100. Easy.
 
@@ -26,7 +26,7 @@ There is just one little twist: if a team is bowled out, the full game overs ins
 
 3. Finally, a successful run chase might end in 142 runs after 13.2 overs, with wickets to spare. In this case, we use the overs played. (One detail: the notation of "13.2 overs" means 13 full overs plus 2 out of 6 balls, i.e., 13 + 2/6 as a number.) The run rate is 142/13.333 = 10.650.
 
-For single games, the run rate is quite meaningless. We are rather interested in a team's performance over several games -- in its overall run rate. For this, we can take its total runs scored over all games, divided by the sum of all applicable overs:
+For single games, the run rate is quite meaningless. We are rather interested in a team's performance over several games -- in its *overall run rate*. For this, we can take its total runs scored over all games, divided by the sum of all applicable overs:
 
 $$RR = \frac{runs_1 + runs_2 + ...}{overs_1 + overs_2 + ...}$$
 
@@ -62,7 +62,7 @@ Luckily, we can handle this operation with vectors. Witness the examples above a
 <br>
 <br>
 
-The visualize overall run rates RR, we can now simply add such vectors! Let's do it step by step, and look at two matches of our team against two opponents.
+The visualize overall run rates RR, we can now simply add such vectors. Let's do it step by step, and look at two matches of our team against two opponents.
 
 * Here is the first match -- our team (Italy, in blue) beat Australia (orange) by 63 runs; Australia were fast, but bowled out in their chase:
 
@@ -83,11 +83,11 @@ The NRR is just the difference in the green RR vectors' slopes.
 
 ## WHY - To Bowl or to Bat?
 
-In the 2024 T20 world cup, England has a scarily low NRR after their first loss by 36 runs to Australia, and had to decide whether to bowl or bat in their 2nd game against Oman.
+In the 2024 T20 world cup, England had a scarily low NRR after their first loss by 36 runs to Australia, and had to decide whether to bowl or bat in their 2nd game against Oman.
 
-Now, batting first means you will create a own-score vector with the full 20 overs as y-component: if you are not bowled out, you just keep going the full 20 overs, and otherwise the full overs are used for your run rate anyway. But this vector can go arbitrarily-high up.
+Now, batting first means you will always create an own-score vector with the full 20 overs as y-component (if you are *not* bowled out, you just keep going till the end; if bowled out, the full overs are used for your run rate anyway). But this vector can go arbitrarily-high up.
 
-Conversely, bowling (well) first might knock out you opponent early; your own vector is then essentially upper-delimited by the opponent's run score. Your vector is bounded, but you might risk more and go faster.
+Conversely, bowling (well) first might knock out your opponent early; your own vector is then essentially upper-bounded by the opponent's run score. Your vector is bounded, but you might risk more and go faster.
 
 So the choice is between adding a large vector versus adding a smaller but steeper one.
 
