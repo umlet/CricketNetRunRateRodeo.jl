@@ -36,7 +36,7 @@ $$NRR = RR - RR'$$
 
 ## HOW - Cricket Vectors!
 
-Now, NRR is a simple subtraction. It's the overall RR that is tricky -- it's a kind of weighted average, but not of the games' individual run rates, but rather their underyling runs and overs. Funnily, this operation is both employed sparingly (in the [mediant](https://en.wikipedia.org/wiki/Mediant_(mathematics)) function or Farey sequences, as the alert cricketer is aware), but encountered every single second (in elementary school, whenever kids fail to sum fractions).
+Now, NRR is a simple subtraction. It's the overall RR that is tricky -- it's a kind of weighted average, but not of the games' individual run rates, but rather their underyling runs and overs. Funnily, this operation is both employed sparingly (in the [mediant](https://en.wikipedia.org/wiki/Mediant_(mathematics)) function or Farey sequences, as the alert cricketer is well aware), but encountered every single second (in elementary school, whenever kids fail to sum fractions).
 
 Luckily, we can handle this operation with vectors. Witness the examples above as graphs:
 
